@@ -44,7 +44,7 @@ public class OrcTouch : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Orc")
+        if (other.tag == "Orc" || other.tag == "Boss")
         {
             Debug.Log("the object was " + other.gameObject.name);
             SceneManager.LoadScene("Lose");
