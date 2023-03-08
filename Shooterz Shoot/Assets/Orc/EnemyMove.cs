@@ -11,7 +11,7 @@ public class EnemyMove : MonoBehaviour
     public float speed = 4f;
     Rigidbody rig;
     public GameObject go;
-    public float orcLife;
+    public float BossorcLife = 8f;
     
 
     void Start()
@@ -30,6 +30,22 @@ public class EnemyMove : MonoBehaviour
         transform.LookAt(target);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Orb")
+        {
+            BossorcLife = BossorcLife - 1;
 
-    
+            if (BossorcLife == 0)
+            {
+                Destroy(go);
+                SceneManager.LoadScene("Victory");
+                Debug.Log("YAY");
+            }
+            
+          
+        }
+    }
+
+
 }

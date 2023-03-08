@@ -22,7 +22,12 @@ public class orb : MonoBehaviour
             Destroy(gameObject);
             Destroy(orbPrefab);
         }
-        
+
+        if (collision.gameObject.tag == "Boss")
+        {
+           
+            Destroy(orbPrefab);
+        }
 
         if (collision.gameObject.tag == "world" || collision.gameObject.tag == "orc")
         {

@@ -816,8 +816,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aud: {fileID: 1260889896}
-  hover: {fileID: 8300000, guid: 41d0698d5579b7d438e88368b83824ac, type: 3}
-  click: {fileID: 8300000, guid: 1401edf301f500c43bf2d71457bb5e9f, type: 3}
+  hover: {fileID: 8300000, guid: 4799f5385b502b74c98177f39f3ccfe9, type: 3}
+  click: {fileID: 8300000, guid: a1b248473feacc34a8180c7b818fcbdb, type: 3}
 --- !u!1 &1365481722
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43dc6c6ef383b8842b0c924d96ce8f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgMusic: {fileID: 0}
 --- !u!114 &1365481724
 MonoBehaviour:
   m_ObjectHideFlags: 0

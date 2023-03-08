@@ -7,23 +7,35 @@ public class OrcTouch : MonoBehaviour
 {
 
     public AudioSource aud;
+    public GameObject orcsTwo;
     
-    
+   
 
+  
+    public AudioClip horn;
+
+
+
+   
     // Start is called before the first frame update
     void Start()
     {
-
+        aud.PlayOneShot(horn);
+ 
+        orcsTwo.SetActive(false);
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("Orc").Length == 0)
+        if (GameObject.FindGameObjectsWithTag("Orc").Length < 3)
         {
-           
-            SceneManager.LoadScene("Victory");
-            Debug.Log("YAY");
+            aud.PlayOneShot(horn);
+            spawnTwo();
+
+            
+                
            
         }
 
@@ -39,4 +51,13 @@ public class OrcTouch : MonoBehaviour
             
         }
     }
+
+    void spawnTwo()
+    {
+        orcsTwo.SetActive(true);
+    }
+
+    
+    
+
 }
